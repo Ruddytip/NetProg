@@ -95,6 +95,8 @@ int main(int argc, char const *argv[])
             // Send same content back to the client ("echo").
             sendto(sock, buffer, recv_len, 0, reinterpret_cast<const sockaddr *>(&client_address),
                    client_address_len);
+
+            if(std::string(buffer) == "exit") break;
         }
 
         std::cout << std::endl;

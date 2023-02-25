@@ -80,7 +80,6 @@ int print_ips_with_getaddrinfo(const std::string &host_name)
     return EXIT_SUCCESS;
 }
 
-
 int print_ips_with_gethostbyname(const std::string &host_name)
 {
     std::cout
@@ -135,9 +134,7 @@ int print_ips_with_gethostbyname(const std::string &host_name)
     return EXIT_SUCCESS;
 }
 
-
-int main(int argc, const char *argv[])
-{
+int main(int argc, const char *argv[]){
 
     if (argc != 2)
     {

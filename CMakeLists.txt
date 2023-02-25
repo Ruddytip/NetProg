@@ -4,6 +4,8 @@ project(cpp-network-lesson-1 C CXX)
 
 add_executable(test_byte_order test_byte_order.cpp)
 
+add_subdirectory(socket_wrapper)
 add_subdirectory(resolve)
 add_subdirectory(udp_server)
-
+add_subdirectory(udp_client)
+add_subdirectory(ping)
