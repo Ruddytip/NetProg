@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=cpp-network-lesson-1
+CMAKE_PROJECT_NAME:STATIC=cpp-network-lesson-2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -209,32 +209,86 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-cpp-network-lesson-1_BINARY_DIR:STATIC=/private/Develop/Source/build
+//Path to a file.
+PCAP_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+PCAP_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpcap.so
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Value Computed by CMake
-cpp-network-lesson-1_IS_TOP_LEVEL:STATIC=ON
+call-intercepter_BINARY_DIR:STATIC=/private/Develop/Source/build/linux_call_intercepter
 
 //Value Computed by CMake
-cpp-network-lesson-1_SOURCE_DIR:STATIC=/private/Develop/Source
+call-intercepter_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+call-intercepter_LIB_DEPENDS:STATIC=general;dl;
 
 //Value Computed by CMake
-dns-resolver_BINARY_DIR:STATIC=/private/Develop/Source/build/resolve
+call-intercepter_SOURCE_DIR:STATIC=/private/Develop/Source/linux_call_intercepter
 
 //Value Computed by CMake
-dns-resolver_IS_TOP_LEVEL:STATIC=OFF
+cpp-network-lesson-2_BINARY_DIR:STATIC=/private/Develop/Source/build
 
 //Value Computed by CMake
-dns-resolver_SOURCE_DIR:STATIC=/private/Develop/Source/resolve
+cpp-network-lesson-2_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-ping_BINARY_DIR:STATIC=/private/Develop/Source/build/ping
+cpp-network-lesson-2_SOURCE_DIR:STATIC=/private/Develop/Source
 
 //Value Computed by CMake
-ping_IS_TOP_LEVEL:STATIC=OFF
+incorrect-udp-client_BINARY_DIR:STATIC=/private/Develop/Source/build/incorrect_udp_client
 
 //Value Computed by CMake
-ping_SOURCE_DIR:STATIC=/private/Develop/Source/ping
+incorrect-udp-client_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+incorrect-udp-client_SOURCE_DIR:STATIC=/private/Develop/Source/incorrect_udp_client
+
+//Value Computed by CMake
+pcap-sniffer_BINARY_DIR:STATIC=/private/Develop/Source/build/pcap_sniffer
+
+//Value Computed by CMake
+pcap-sniffer_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+pcap-sniffer_SOURCE_DIR:STATIC=/private/Develop/Source/pcap_sniffer
+
+//Path to a library.
+pkgcfg_lib_PC_PCAP_pcap:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpcap.so
+
+//Value Computed by CMake
+promisc-switcher_BINARY_DIR:STATIC=/private/Develop/Source/build/promisc_switcher
+
+//Value Computed by CMake
+promisc-switcher_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+promisc-switcher_SOURCE_DIR:STATIC=/private/Develop/Source/promisc_switcher
+
+//Value Computed by CMake
+raw-sniffer_BINARY_DIR:STATIC=/private/Develop/Source/build/raw_sniffer
+
+//Value Computed by CMake
+raw-sniffer_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+raw-sniffer_SOURCE_DIR:STATIC=/private/Develop/Source/raw_sniffer
+
+//Value Computed by CMake
+simple-http-proxy_BINARY_DIR:STATIC=/private/Develop/Source/build/simple_http_proxy
+
+//Value Computed by CMake
+simple-http-proxy_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+simple-http-proxy_SOURCE_DIR:STATIC=/private/Develop/Source/simple_http_proxy
 
 //Value Computed by CMake
 socket-wrapper_BINARY_DIR:STATIC=/private/Develop/Source/build/socket_wrapper
@@ -244,24 +298,6 @@ socket-wrapper_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 socket-wrapper_SOURCE_DIR:STATIC=/private/Develop/Source/socket_wrapper
-
-//Value Computed by CMake
-udp-client_BINARY_DIR:STATIC=/private/Develop/Source/build/udp_client
-
-//Value Computed by CMake
-udp-client_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-udp-client_SOURCE_DIR:STATIC=/private/Develop/Source/udp_client
-
-//Value Computed by CMake
-udp-server_BINARY_DIR:STATIC=/private/Develop/Source/build/udp_server
-
-//Value Computed by CMake
-udp-server_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-udp-server_SOURCE_DIR:STATIC=/private/Develop/Source/udp_server
 
 
 ########################
@@ -368,7 +404,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -411,4 +447,69 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PCAP
+FIND_PACKAGE_MESSAGE_DETAILS_PCAP:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libpcap.so][/usr/include][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.2()]
+//Have function pcap_create
+HAVE_PCAP_CREATE:INTERNAL=1
+//Have function pcap_freecode
+HAVE_PCAP_FREECODE:INTERNAL=1
+//Have function pcap_free_datalinks
+HAVE_PCAP_FREE_DATALINKS:INTERNAL=1
+//Have symbol pcap_lib_version
+HAVE_PCAP_LIB_VERSION:INTERNAL=1
+//Have function pcap_open
+HAVE_PCAP_OPEN:INTERNAL=
+//Have function pcap_set_tstamp_precision
+HAVE_PCAP_SET_TSTAMP_PRECISION:INTERNAL=1
+//Have function pcap_set_tstamp_type
+HAVE_PCAP_SET_TSTAMP_TYPE:INTERNAL=1
+//ADVANCED property for variable: PCAP_INCLUDE_DIR
+PCAP_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCAP_LIBRARY
+PCAP_LIBRARY-ADVANCED:INTERNAL=1
+PC_PCAP_CFLAGS:INTERNAL=
+PC_PCAP_CFLAGS_I:INTERNAL=
+PC_PCAP_CFLAGS_OTHER:INTERNAL=
+PC_PCAP_FOUND:INTERNAL=1
+PC_PCAP_INCLUDEDIR:INTERNAL=/usr/include
+PC_PCAP_INCLUDE_DIRS:INTERNAL=
+PC_PCAP_LDFLAGS:INTERNAL=-L/usr/lib/arm-linux-gnueabihf;-lpcap
+PC_PCAP_LDFLAGS_OTHER:INTERNAL=
+PC_PCAP_LIBDIR:INTERNAL=/usr/lib/arm-linux-gnueabihf
+PC_PCAP_LIBRARIES:INTERNAL=pcap
+PC_PCAP_LIBRARY_DIRS:INTERNAL=/usr/lib/arm-linux-gnueabihf
+PC_PCAP_LIBS:INTERNAL=
+PC_PCAP_LIBS_L:INTERNAL=
+PC_PCAP_LIBS_OTHER:INTERNAL=
+PC_PCAP_LIBS_PATHS:INTERNAL=
+PC_PCAP_MODULE_NAME:INTERNAL=libpcap
+PC_PCAP_PREFIX:INTERNAL=/usr
+PC_PCAP_STATIC_CFLAGS:INTERNAL=
+PC_PCAP_STATIC_CFLAGS_I:INTERNAL=
+PC_PCAP_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_PCAP_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_PCAP_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/arm-linux-gnueabihf;-lpcap;-ldbus-1
+PC_PCAP_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_PCAP_STATIC_LIBDIR:INTERNAL=
+PC_PCAP_STATIC_LIBRARIES:INTERNAL=pcap;dbus-1
+PC_PCAP_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/arm-linux-gnueabihf
+PC_PCAP_STATIC_LIBS:INTERNAL=
+PC_PCAP_STATIC_LIBS_L:INTERNAL=
+PC_PCAP_STATIC_LIBS_OTHER:INTERNAL=
+PC_PCAP_STATIC_LIBS_PATHS:INTERNAL=
+PC_PCAP_VERSION:INTERNAL=1.10.1
+PC_PCAP_libpcap_INCLUDEDIR:INTERNAL=
+PC_PCAP_libpcap_LIBDIR:INTERNAL=
+PC_PCAP_libpcap_PREFIX:INTERNAL=
+PC_PCAP_libpcap_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+__pkg_config_checked_PC_PCAP:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_PCAP_pcap
+pkgcfg_lib_PC_PCAP_pcap-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/arm-linux-gnueabihf
 

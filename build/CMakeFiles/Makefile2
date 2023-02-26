@@ -63,60 +63,124 @@ CMAKE_BINARY_DIR = /private/Develop/Source/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/test_byte_order.dir/all
+all: linux_call_intercepter/all
 all: socket_wrapper/all
-all: resolve/all
-all: udp_server/all
-all: udp_client/all
-all: ping/all
+all: incorrect_udp_client/all
+all: promisc_switcher/all
+all: raw_sniffer/all
+all: pcap_sniffer/all
+all: simple_http_proxy/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: linux_call_intercepter/preinstall
 preinstall: socket_wrapper/preinstall
-preinstall: resolve/preinstall
-preinstall: udp_server/preinstall
-preinstall: udp_client/preinstall
-preinstall: ping/preinstall
+preinstall: incorrect_udp_client/preinstall
+preinstall: promisc_switcher/preinstall
+preinstall: raw_sniffer/preinstall
+preinstall: pcap_sniffer/preinstall
+preinstall: simple_http_proxy/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/test_byte_order.dir/clean
+clean: linux_call_intercepter/clean
 clean: socket_wrapper/clean
-clean: resolve/clean
-clean: udp_server/clean
-clean: udp_client/clean
-clean: ping/clean
+clean: incorrect_udp_client/clean
+clean: promisc_switcher/clean
+clean: raw_sniffer/clean
+clean: pcap_sniffer/clean
+clean: simple_http_proxy/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory ping
+# Directory level rules for directory incorrect_udp_client
 
 # Recursive "all" directory target.
-ping/all: ping/CMakeFiles/ping.dir/all
-.PHONY : ping/all
+incorrect_udp_client/all: incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/all
+.PHONY : incorrect_udp_client/all
 
 # Recursive "preinstall" directory target.
-ping/preinstall:
-.PHONY : ping/preinstall
+incorrect_udp_client/preinstall:
+.PHONY : incorrect_udp_client/preinstall
 
 # Recursive "clean" directory target.
-ping/clean: ping/CMakeFiles/ping.dir/clean
-.PHONY : ping/clean
+incorrect_udp_client/clean: incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/clean
+.PHONY : incorrect_udp_client/clean
 
 #=============================================================================
-# Directory level rules for directory resolve
+# Directory level rules for directory linux_call_intercepter
 
 # Recursive "all" directory target.
-resolve/all: resolve/CMakeFiles/dns-resolver.dir/all
-.PHONY : resolve/all
+linux_call_intercepter/all: linux_call_intercepter/CMakeFiles/call-intercepter.dir/all
+.PHONY : linux_call_intercepter/all
 
 # Recursive "preinstall" directory target.
-resolve/preinstall:
-.PHONY : resolve/preinstall
+linux_call_intercepter/preinstall:
+.PHONY : linux_call_intercepter/preinstall
 
 # Recursive "clean" directory target.
-resolve/clean: resolve/CMakeFiles/dns-resolver.dir/clean
-.PHONY : resolve/clean
+linux_call_intercepter/clean: linux_call_intercepter/CMakeFiles/call-intercepter.dir/clean
+.PHONY : linux_call_intercepter/clean
+
+#=============================================================================
+# Directory level rules for directory pcap_sniffer
+
+# Recursive "all" directory target.
+pcap_sniffer/all: pcap_sniffer/CMakeFiles/pcap-sniffer.dir/all
+.PHONY : pcap_sniffer/all
+
+# Recursive "preinstall" directory target.
+pcap_sniffer/preinstall:
+.PHONY : pcap_sniffer/preinstall
+
+# Recursive "clean" directory target.
+pcap_sniffer/clean: pcap_sniffer/CMakeFiles/pcap-sniffer.dir/clean
+.PHONY : pcap_sniffer/clean
+
+#=============================================================================
+# Directory level rules for directory promisc_switcher
+
+# Recursive "all" directory target.
+promisc_switcher/all: promisc_switcher/CMakeFiles/promisc-switcher.dir/all
+.PHONY : promisc_switcher/all
+
+# Recursive "preinstall" directory target.
+promisc_switcher/preinstall:
+.PHONY : promisc_switcher/preinstall
+
+# Recursive "clean" directory target.
+promisc_switcher/clean: promisc_switcher/CMakeFiles/promisc-switcher.dir/clean
+.PHONY : promisc_switcher/clean
+
+#=============================================================================
+# Directory level rules for directory raw_sniffer
+
+# Recursive "all" directory target.
+raw_sniffer/all: raw_sniffer/CMakeFiles/raw-sniffer.dir/all
+.PHONY : raw_sniffer/all
+
+# Recursive "preinstall" directory target.
+raw_sniffer/preinstall:
+.PHONY : raw_sniffer/preinstall
+
+# Recursive "clean" directory target.
+raw_sniffer/clean: raw_sniffer/CMakeFiles/raw-sniffer.dir/clean
+.PHONY : raw_sniffer/clean
+
+#=============================================================================
+# Directory level rules for directory simple_http_proxy
+
+# Recursive "all" directory target.
+simple_http_proxy/all: simple_http_proxy/CMakeFiles/simple-http-proxy.dir/all
+.PHONY : simple_http_proxy/all
+
+# Recursive "preinstall" directory target.
+simple_http_proxy/preinstall:
+.PHONY : simple_http_proxy/preinstall
+
+# Recursive "clean" directory target.
+simple_http_proxy/clean: simple_http_proxy/CMakeFiles/simple-http-proxy.dir/clean
+.PHONY : simple_http_proxy/clean
 
 #=============================================================================
 # Directory level rules for directory socket_wrapper
@@ -134,60 +198,30 @@ socket_wrapper/clean: socket_wrapper/CMakeFiles/socket-wrapper.dir/clean
 .PHONY : socket_wrapper/clean
 
 #=============================================================================
-# Directory level rules for directory udp_client
-
-# Recursive "all" directory target.
-udp_client/all: udp_client/CMakeFiles/udp-client.dir/all
-.PHONY : udp_client/all
-
-# Recursive "preinstall" directory target.
-udp_client/preinstall:
-.PHONY : udp_client/preinstall
-
-# Recursive "clean" directory target.
-udp_client/clean: udp_client/CMakeFiles/udp-client.dir/clean
-.PHONY : udp_client/clean
-
-#=============================================================================
-# Directory level rules for directory udp_server
-
-# Recursive "all" directory target.
-udp_server/all: udp_server/CMakeFiles/udp-server.dir/all
-.PHONY : udp_server/all
-
-# Recursive "preinstall" directory target.
-udp_server/preinstall:
-.PHONY : udp_server/preinstall
-
-# Recursive "clean" directory target.
-udp_server/clean: udp_server/CMakeFiles/udp-server.dir/clean
-.PHONY : udp_server/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test_byte_order.dir
+# Target rules for target linux_call_intercepter/CMakeFiles/call-intercepter.dir
 
 # All Build rule for target.
-CMakeFiles/test_byte_order.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=8,9 "Built target test_byte_order"
-.PHONY : CMakeFiles/test_byte_order.dir/all
+linux_call_intercepter/CMakeFiles/call-intercepter.dir/all:
+	$(MAKE) $(MAKESILENT) -f linux_call_intercepter/CMakeFiles/call-intercepter.dir/build.make linux_call_intercepter/CMakeFiles/call-intercepter.dir/depend
+	$(MAKE) $(MAKESILENT) -f linux_call_intercepter/CMakeFiles/call-intercepter.dir/build.make linux_call_intercepter/CMakeFiles/call-intercepter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=1,2 "Built target call-intercepter"
+.PHONY : linux_call_intercepter/CMakeFiles/call-intercepter.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test_byte_order.dir/rule: cmake_check_build_system
+linux_call_intercepter/CMakeFiles/call-intercepter.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_byte_order.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linux_call_intercepter/CMakeFiles/call-intercepter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 0
-.PHONY : CMakeFiles/test_byte_order.dir/rule
+.PHONY : linux_call_intercepter/CMakeFiles/call-intercepter.dir/rule
 
 # Convenience name for target.
-test_byte_order: CMakeFiles/test_byte_order.dir/rule
-.PHONY : test_byte_order
+call-intercepter: linux_call_intercepter/CMakeFiles/call-intercepter.dir/rule
+.PHONY : call-intercepter
 
 # clean rule for target.
-CMakeFiles/test_byte_order.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/clean
-.PHONY : CMakeFiles/test_byte_order.dir/clean
+linux_call_intercepter/CMakeFiles/call-intercepter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f linux_call_intercepter/CMakeFiles/call-intercepter.dir/build.make linux_call_intercepter/CMakeFiles/call-intercepter.dir/clean
+.PHONY : linux_call_intercepter/CMakeFiles/call-intercepter.dir/clean
 
 #=============================================================================
 # Target rules for target socket_wrapper/CMakeFiles/socket-wrapper.dir
@@ -196,7 +230,7 @@ CMakeFiles/test_byte_order.dir/clean:
 socket_wrapper/CMakeFiles/socket-wrapper.dir/all:
 	$(MAKE) $(MAKESILENT) -f socket_wrapper/CMakeFiles/socket-wrapper.dir/build.make socket_wrapper/CMakeFiles/socket-wrapper.dir/depend
 	$(MAKE) $(MAKESILENT) -f socket_wrapper/CMakeFiles/socket-wrapper.dir/build.make socket_wrapper/CMakeFiles/socket-wrapper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=5,6,7 "Built target socket-wrapper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=16,17,18 "Built target socket-wrapper"
 .PHONY : socket_wrapper/CMakeFiles/socket-wrapper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -216,108 +250,134 @@ socket_wrapper/CMakeFiles/socket-wrapper.dir/clean:
 .PHONY : socket_wrapper/CMakeFiles/socket-wrapper.dir/clean
 
 #=============================================================================
-# Target rules for target resolve/CMakeFiles/dns-resolver.dir
+# Target rules for target incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir
 
 # All Build rule for target.
-resolve/CMakeFiles/dns-resolver.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
-	$(MAKE) $(MAKESILENT) -f resolve/CMakeFiles/dns-resolver.dir/build.make resolve/CMakeFiles/dns-resolver.dir/depend
-	$(MAKE) $(MAKESILENT) -f resolve/CMakeFiles/dns-resolver.dir/build.make resolve/CMakeFiles/dns-resolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=1,2 "Built target dns-resolver"
-.PHONY : resolve/CMakeFiles/dns-resolver.dir/all
+incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
+	$(MAKE) $(MAKESILENT) -f incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/build.make incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/depend
+	$(MAKE) $(MAKESILENT) -f incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/build.make incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=3,4 "Built target incorrect-udp-client"
+.PHONY : incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/all
 
 # Build rule for subdir invocation for target.
-resolve/CMakeFiles/dns-resolver.dir/rule: cmake_check_build_system
+incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resolve/CMakeFiles/dns-resolver.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 0
-.PHONY : resolve/CMakeFiles/dns-resolver.dir/rule
+.PHONY : incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/rule
 
 # Convenience name for target.
-dns-resolver: resolve/CMakeFiles/dns-resolver.dir/rule
-.PHONY : dns-resolver
+incorrect-udp-client: incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/rule
+.PHONY : incorrect-udp-client
 
 # clean rule for target.
-resolve/CMakeFiles/dns-resolver.dir/clean:
-	$(MAKE) $(MAKESILENT) -f resolve/CMakeFiles/dns-resolver.dir/build.make resolve/CMakeFiles/dns-resolver.dir/clean
-.PHONY : resolve/CMakeFiles/dns-resolver.dir/clean
+incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/build.make incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/clean
+.PHONY : incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/clean
 
 #=============================================================================
-# Target rules for target udp_server/CMakeFiles/udp-server.dir
+# Target rules for target promisc_switcher/CMakeFiles/promisc-switcher.dir
 
 # All Build rule for target.
-udp_server/CMakeFiles/udp-server.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
-	$(MAKE) $(MAKESILENT) -f udp_server/CMakeFiles/udp-server.dir/build.make udp_server/CMakeFiles/udp-server.dir/depend
-	$(MAKE) $(MAKESILENT) -f udp_server/CMakeFiles/udp-server.dir/build.make udp_server/CMakeFiles/udp-server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=12,13 "Built target udp-server"
-.PHONY : udp_server/CMakeFiles/udp-server.dir/all
+promisc_switcher/CMakeFiles/promisc-switcher.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
+	$(MAKE) $(MAKESILENT) -f promisc_switcher/CMakeFiles/promisc-switcher.dir/build.make promisc_switcher/CMakeFiles/promisc-switcher.dir/depend
+	$(MAKE) $(MAKESILENT) -f promisc_switcher/CMakeFiles/promisc-switcher.dir/build.make promisc_switcher/CMakeFiles/promisc-switcher.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=8,9 "Built target promisc-switcher"
+.PHONY : promisc_switcher/CMakeFiles/promisc-switcher.dir/all
 
 # Build rule for subdir invocation for target.
-udp_server/CMakeFiles/udp-server.dir/rule: cmake_check_build_system
+promisc_switcher/CMakeFiles/promisc-switcher.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_server/CMakeFiles/udp-server.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 promisc_switcher/CMakeFiles/promisc-switcher.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 0
-.PHONY : udp_server/CMakeFiles/udp-server.dir/rule
+.PHONY : promisc_switcher/CMakeFiles/promisc-switcher.dir/rule
 
 # Convenience name for target.
-udp-server: udp_server/CMakeFiles/udp-server.dir/rule
-.PHONY : udp-server
+promisc-switcher: promisc_switcher/CMakeFiles/promisc-switcher.dir/rule
+.PHONY : promisc-switcher
 
 # clean rule for target.
-udp_server/CMakeFiles/udp-server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f udp_server/CMakeFiles/udp-server.dir/build.make udp_server/CMakeFiles/udp-server.dir/clean
-.PHONY : udp_server/CMakeFiles/udp-server.dir/clean
+promisc_switcher/CMakeFiles/promisc-switcher.dir/clean:
+	$(MAKE) $(MAKESILENT) -f promisc_switcher/CMakeFiles/promisc-switcher.dir/build.make promisc_switcher/CMakeFiles/promisc-switcher.dir/clean
+.PHONY : promisc_switcher/CMakeFiles/promisc-switcher.dir/clean
 
 #=============================================================================
-# Target rules for target udp_client/CMakeFiles/udp-client.dir
+# Target rules for target raw_sniffer/CMakeFiles/raw-sniffer.dir
 
 # All Build rule for target.
-udp_client/CMakeFiles/udp-client.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
-	$(MAKE) $(MAKESILENT) -f udp_client/CMakeFiles/udp-client.dir/build.make udp_client/CMakeFiles/udp-client.dir/depend
-	$(MAKE) $(MAKESILENT) -f udp_client/CMakeFiles/udp-client.dir/build.make udp_client/CMakeFiles/udp-client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=10,11 "Built target udp-client"
-.PHONY : udp_client/CMakeFiles/udp-client.dir/all
+raw_sniffer/CMakeFiles/raw-sniffer.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
+	$(MAKE) $(MAKESILENT) -f raw_sniffer/CMakeFiles/raw-sniffer.dir/build.make raw_sniffer/CMakeFiles/raw-sniffer.dir/depend
+	$(MAKE) $(MAKESILENT) -f raw_sniffer/CMakeFiles/raw-sniffer.dir/build.make raw_sniffer/CMakeFiles/raw-sniffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=10,11,12 "Built target raw-sniffer"
+.PHONY : raw_sniffer/CMakeFiles/raw-sniffer.dir/all
 
 # Build rule for subdir invocation for target.
-udp_client/CMakeFiles/udp-client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_client/CMakeFiles/udp-client.dir/all
+raw_sniffer/CMakeFiles/raw-sniffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raw_sniffer/CMakeFiles/raw-sniffer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 0
-.PHONY : udp_client/CMakeFiles/udp-client.dir/rule
+.PHONY : raw_sniffer/CMakeFiles/raw-sniffer.dir/rule
 
 # Convenience name for target.
-udp-client: udp_client/CMakeFiles/udp-client.dir/rule
-.PHONY : udp-client
+raw-sniffer: raw_sniffer/CMakeFiles/raw-sniffer.dir/rule
+.PHONY : raw-sniffer
 
 # clean rule for target.
-udp_client/CMakeFiles/udp-client.dir/clean:
-	$(MAKE) $(MAKESILENT) -f udp_client/CMakeFiles/udp-client.dir/build.make udp_client/CMakeFiles/udp-client.dir/clean
-.PHONY : udp_client/CMakeFiles/udp-client.dir/clean
+raw_sniffer/CMakeFiles/raw-sniffer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f raw_sniffer/CMakeFiles/raw-sniffer.dir/build.make raw_sniffer/CMakeFiles/raw-sniffer.dir/clean
+.PHONY : raw_sniffer/CMakeFiles/raw-sniffer.dir/clean
 
 #=============================================================================
-# Target rules for target ping/CMakeFiles/ping.dir
+# Target rules for target pcap_sniffer/CMakeFiles/pcap-sniffer.dir
 
 # All Build rule for target.
-ping/CMakeFiles/ping.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
-	$(MAKE) $(MAKESILENT) -f ping/CMakeFiles/ping.dir/build.make ping/CMakeFiles/ping.dir/depend
-	$(MAKE) $(MAKESILENT) -f ping/CMakeFiles/ping.dir/build.make ping/CMakeFiles/ping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=3,4 "Built target ping"
-.PHONY : ping/CMakeFiles/ping.dir/all
+pcap_sniffer/CMakeFiles/pcap-sniffer.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
+	$(MAKE) $(MAKESILENT) -f pcap_sniffer/CMakeFiles/pcap-sniffer.dir/build.make pcap_sniffer/CMakeFiles/pcap-sniffer.dir/depend
+	$(MAKE) $(MAKESILENT) -f pcap_sniffer/CMakeFiles/pcap-sniffer.dir/build.make pcap_sniffer/CMakeFiles/pcap-sniffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=5,6,7 "Built target pcap-sniffer"
+.PHONY : pcap_sniffer/CMakeFiles/pcap-sniffer.dir/all
 
 # Build rule for subdir invocation for target.
-ping/CMakeFiles/ping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ping/CMakeFiles/ping.dir/all
+pcap_sniffer/CMakeFiles/pcap-sniffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcap_sniffer/CMakeFiles/pcap-sniffer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 0
-.PHONY : ping/CMakeFiles/ping.dir/rule
+.PHONY : pcap_sniffer/CMakeFiles/pcap-sniffer.dir/rule
 
 # Convenience name for target.
-ping: ping/CMakeFiles/ping.dir/rule
-.PHONY : ping
+pcap-sniffer: pcap_sniffer/CMakeFiles/pcap-sniffer.dir/rule
+.PHONY : pcap-sniffer
 
 # clean rule for target.
-ping/CMakeFiles/ping.dir/clean:
-	$(MAKE) $(MAKESILENT) -f ping/CMakeFiles/ping.dir/build.make ping/CMakeFiles/ping.dir/clean
-.PHONY : ping/CMakeFiles/ping.dir/clean
+pcap_sniffer/CMakeFiles/pcap-sniffer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f pcap_sniffer/CMakeFiles/pcap-sniffer.dir/build.make pcap_sniffer/CMakeFiles/pcap-sniffer.dir/clean
+.PHONY : pcap_sniffer/CMakeFiles/pcap-sniffer.dir/clean
+
+#=============================================================================
+# Target rules for target simple_http_proxy/CMakeFiles/simple-http-proxy.dir
+
+# All Build rule for target.
+simple_http_proxy/CMakeFiles/simple-http-proxy.dir/all: socket_wrapper/CMakeFiles/socket-wrapper.dir/all
+	$(MAKE) $(MAKESILENT) -f simple_http_proxy/CMakeFiles/simple-http-proxy.dir/build.make simple_http_proxy/CMakeFiles/simple-http-proxy.dir/depend
+	$(MAKE) $(MAKESILENT) -f simple_http_proxy/CMakeFiles/simple-http-proxy.dir/build.make simple_http_proxy/CMakeFiles/simple-http-proxy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/private/Develop/Source/build/CMakeFiles --progress-num=13,14,15 "Built target simple-http-proxy"
+.PHONY : simple_http_proxy/CMakeFiles/simple-http-proxy.dir/all
+
+# Build rule for subdir invocation for target.
+simple_http_proxy/CMakeFiles/simple-http-proxy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_http_proxy/CMakeFiles/simple-http-proxy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /private/Develop/Source/build/CMakeFiles 0
+.PHONY : simple_http_proxy/CMakeFiles/simple-http-proxy.dir/rule
+
+# Convenience name for target.
+simple-http-proxy: simple_http_proxy/CMakeFiles/simple-http-proxy.dir/rule
+.PHONY : simple-http-proxy
+
+# clean rule for target.
+simple_http_proxy/CMakeFiles/simple-http-proxy.dir/clean:
+	$(MAKE) $(MAKESILENT) -f simple_http_proxy/CMakeFiles/simple-http-proxy.dir/build.make simple_http_proxy/CMakeFiles/simple-http-proxy.dir/clean
+.PHONY : simple_http_proxy/CMakeFiles/simple-http-proxy.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

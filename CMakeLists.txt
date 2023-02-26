@@ -1,11 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(cpp-network-lesson-1 C CXX)
+project(cpp-network-lesson-2 C CXX)
 
-add_executable(test_byte_order test_byte_order.cpp)
+if (UNIX)
+    add_subdirectory("linux_call_intercepter")
+endif()
 
-add_subdirectory(socket_wrapper)
-add_subdirectory(resolve)
-add_subdirectory(udp_server)
-add_subdirectory(udp_client)
-add_subdirectory(ping)
+if (WIN32)
+    add_subdirectory("pil")
+endif()
+
+add_subdirectory("socket_wrapper")
+add_subdirectory("incorrect_udp_client")
+add_subdirectory("promisc_switcher")
+add_subdirectory("raw_sniffer")
+add_subdirectory("pcap_sniffer")
+add_subdirectory("simple_http_proxy")

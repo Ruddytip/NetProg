@@ -11,7 +11,7 @@ extern "C"
 #        define _WIN32_WINNT 0x0501  /* Windows XP. */
 #    endif
 typedef SOCKET SocketDescriptorType;
-// typedef int ssize_t;
+typedef int ssize_t;
 typedef unsigned long IoctlType;
 
 #	if !defined(in_addr_t)

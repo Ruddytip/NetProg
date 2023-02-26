@@ -44,11 +44,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/private/Develop/Source/build/linux_call_intercepter/cmake_install.cmake")
   include("/private/Develop/Source/build/socket_wrapper/cmake_install.cmake")
-  include("/private/Develop/Source/build/resolve/cmake_install.cmake")
-  include("/private/Develop/Source/build/udp_server/cmake_install.cmake")
-  include("/private/Develop/Source/build/udp_client/cmake_install.cmake")
-  include("/private/Develop/Source/build/ping/cmake_install.cmake")
+  include("/private/Develop/Source/build/incorrect_udp_client/cmake_install.cmake")
+  include("/private/Develop/Source/build/promisc_switcher/cmake_install.cmake")
+  include("/private/Develop/Source/build/raw_sniffer/cmake_install.cmake")
+  include("/private/Develop/Source/build/pcap_sniffer/cmake_install.cmake")
+  include("/private/Develop/Source/build/simple_http_proxy/cmake_install.cmake")
 
 endif()
 

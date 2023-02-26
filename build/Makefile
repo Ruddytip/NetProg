@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_byte_order
+# Target rules for targets named call-intercepter
 
 # Build rule for target.
-test_byte_order: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_byte_order
-.PHONY : test_byte_order
+call-intercepter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 call-intercepter
+.PHONY : call-intercepter
 
 # fast build rule for target.
-test_byte_order/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/build
-.PHONY : test_byte_order/fast
+call-intercepter/fast:
+	$(MAKE) $(MAKESILENT) -f linux_call_intercepter/CMakeFiles/call-intercepter.dir/build.make linux_call_intercepter/CMakeFiles/call-intercepter.dir/build
+.PHONY : call-intercepter/fast
 
 #=============================================================================
 # Target rules for targets named socket-wrapper
@@ -143,80 +143,69 @@ socket-wrapper/fast:
 .PHONY : socket-wrapper/fast
 
 #=============================================================================
-# Target rules for targets named dns-resolver
+# Target rules for targets named incorrect-udp-client
 
 # Build rule for target.
-dns-resolver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dns-resolver
-.PHONY : dns-resolver
+incorrect-udp-client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 incorrect-udp-client
+.PHONY : incorrect-udp-client
 
 # fast build rule for target.
-dns-resolver/fast:
-	$(MAKE) $(MAKESILENT) -f resolve/CMakeFiles/dns-resolver.dir/build.make resolve/CMakeFiles/dns-resolver.dir/build
-.PHONY : dns-resolver/fast
+incorrect-udp-client/fast:
+	$(MAKE) $(MAKESILENT) -f incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/build.make incorrect_udp_client/CMakeFiles/incorrect-udp-client.dir/build
+.PHONY : incorrect-udp-client/fast
 
 #=============================================================================
-# Target rules for targets named udp-server
+# Target rules for targets named promisc-switcher
 
 # Build rule for target.
-udp-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp-server
-.PHONY : udp-server
+promisc-switcher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 promisc-switcher
+.PHONY : promisc-switcher
 
 # fast build rule for target.
-udp-server/fast:
-	$(MAKE) $(MAKESILENT) -f udp_server/CMakeFiles/udp-server.dir/build.make udp_server/CMakeFiles/udp-server.dir/build
-.PHONY : udp-server/fast
+promisc-switcher/fast:
+	$(MAKE) $(MAKESILENT) -f promisc_switcher/CMakeFiles/promisc-switcher.dir/build.make promisc_switcher/CMakeFiles/promisc-switcher.dir/build
+.PHONY : promisc-switcher/fast
 
 #=============================================================================
-# Target rules for targets named udp-client
+# Target rules for targets named raw-sniffer
 
 # Build rule for target.
-udp-client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp-client
-.PHONY : udp-client
+raw-sniffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raw-sniffer
+.PHONY : raw-sniffer
 
 # fast build rule for target.
-udp-client/fast:
-	$(MAKE) $(MAKESILENT) -f udp_client/CMakeFiles/udp-client.dir/build.make udp_client/CMakeFiles/udp-client.dir/build
-.PHONY : udp-client/fast
+raw-sniffer/fast:
+	$(MAKE) $(MAKESILENT) -f raw_sniffer/CMakeFiles/raw-sniffer.dir/build.make raw_sniffer/CMakeFiles/raw-sniffer.dir/build
+.PHONY : raw-sniffer/fast
 
 #=============================================================================
-# Target rules for targets named ping
+# Target rules for targets named pcap-sniffer
 
 # Build rule for target.
-ping: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ping
-.PHONY : ping
+pcap-sniffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcap-sniffer
+.PHONY : pcap-sniffer
 
 # fast build rule for target.
-ping/fast:
-	$(MAKE) $(MAKESILENT) -f ping/CMakeFiles/ping.dir/build.make ping/CMakeFiles/ping.dir/build
-.PHONY : ping/fast
+pcap-sniffer/fast:
+	$(MAKE) $(MAKESILENT) -f pcap_sniffer/CMakeFiles/pcap-sniffer.dir/build.make pcap_sniffer/CMakeFiles/pcap-sniffer.dir/build
+.PHONY : pcap-sniffer/fast
 
-test_byte_order.o: test_byte_order.cpp.o
-.PHONY : test_byte_order.o
+#=============================================================================
+# Target rules for targets named simple-http-proxy
 
-# target to build an object file
-test_byte_order.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/test_byte_order.cpp.o
-.PHONY : test_byte_order.cpp.o
+# Build rule for target.
+simple-http-proxy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple-http-proxy
+.PHONY : simple-http-proxy
 
-test_byte_order.i: test_byte_order.cpp.i
-.PHONY : test_byte_order.i
-
-# target to preprocess a source file
-test_byte_order.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/test_byte_order.cpp.i
-.PHONY : test_byte_order.cpp.i
-
-test_byte_order.s: test_byte_order.cpp.s
-.PHONY : test_byte_order.s
-
-# target to generate assembly for a file
-test_byte_order.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_byte_order.dir/build.make CMakeFiles/test_byte_order.dir/test_byte_order.cpp.s
-.PHONY : test_byte_order.cpp.s
+# fast build rule for target.
+simple-http-proxy/fast:
+	$(MAKE) $(MAKESILENT) -f simple_http_proxy/CMakeFiles/simple-http-proxy.dir/build.make simple_http_proxy/CMakeFiles/simple-http-proxy.dir/build
+.PHONY : simple-http-proxy/fast
 
 # Help Target
 help:
@@ -226,15 +215,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... dns-resolver"
-	@echo "... ping"
+	@echo "... call-intercepter"
+	@echo "... incorrect-udp-client"
+	@echo "... pcap-sniffer"
+	@echo "... promisc-switcher"
+	@echo "... raw-sniffer"
+	@echo "... simple-http-proxy"
 	@echo "... socket-wrapper"
-	@echo "... test_byte_order"
-	@echo "... udp-client"
-	@echo "... udp-server"
-	@echo "... test_byte_order.o"
-	@echo "... test_byte_order.i"
-	@echo "... test_byte_order.s"
 .PHONY : help
 
 

@@ -2,6 +2,7 @@
 
 #include <string>
 
+
 class ISocketWrapperImpl
 {
 public:
