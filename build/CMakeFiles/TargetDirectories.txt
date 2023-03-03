@@ -1,0 +1,14 @@
+/private/Develop/Source/NetProg/build/CMakeFiles/edit_cache.dir
+/private/Develop/Source/NetProg/build/CMakeFiles/rebuild_cache.dir
+/private/Develop/Source/NetProg/build/socket_wrapper/CMakeFiles/socket-wrapper.dir
+/private/Develop/Source/NetProg/build/socket_wrapper/CMakeFiles/edit_cache.dir
+/private/Develop/Source/NetProg/build/socket_wrapper/CMakeFiles/rebuild_cache.dir
+/private/Develop/Source/NetProg/build/broadcast_client/CMakeFiles/broadcast_client.dir
+/private/Develop/Source/NetProg/build/broadcast_client/CMakeFiles/edit_cache.dir
+/private/Develop/Source/NetProg/build/broadcast_client/CMakeFiles/rebuild_cache.dir
+/private/Develop/Source/NetProg/build/broadcast_server/CMakeFiles/broadcast_server.dir
+/private/Develop/Source/NetProg/build/broadcast_server/CMakeFiles/edit_cache.dir
+/private/Develop/Source/NetProg/build/broadcast_server/CMakeFiles/rebuild_cache.dir
+/private/Develop/Source/NetProg/build/tcp_client/CMakeFiles/tcp-client.dir
+/private/Develop/Source/NetProg/build/tcp_client/CMakeFiles/edit_cache.dir
+/private/Develop/Source/NetProg/build/tcp_client/CMakeFiles/rebuild_cache.dir
